@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+<h1>Hello</h1>
+<p><%= myContent %></p>
+
+<%  post.forEach(indexOnArray => {%>
+    <h1> <%= indexOnArray.title %> </h1>
+    <p> 
+        <%= indexOnArray.postText.substring(0, 100)+"..." %>
+        <a href="/post/<%=indexOnArray.title%>" >Read more</a> 
+    </p>
+<%});%>
+
+<%- include("partials/footer"); -%>
